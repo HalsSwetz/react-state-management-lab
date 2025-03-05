@@ -148,18 +148,10 @@ const [zombieFighters, setZombieFighters]  = useState([
         </li>
       ))}
       </ul>
-    
 
-  
   </div>
-
-    );
-  }
-
-
-
-
-
+  );
+}
 
 
 export default App

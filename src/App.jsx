@@ -90,15 +90,33 @@ const [zombieFighters, setZombieFighters]  = useState([
       },
     ]);
 
-    
+
 
 
   return (
-    <h1>Hello world!</h1>
-  );
-}
+    <div>
+    <h1>Zombie Fighters</h1>
+    <p>Money: ${money}</p>
 
+      <ul>
+      {zombieFighters.map((fighter) => (
+        <li key={fighter.id}>
+          <img src={fighter.img} alt={fighter.name}/>
+          <p>Name: {fighter.name}</p>
+          <p>Price: ${fighter.price}</p>
+          <p>Strength: {fighter.strength}</p>
+          <p>Agility: {fighter.agility}</p>
+          <button onClick={() => handleAddFighter(fighter)}>Add</button>
+        </li>
+      ))}
+      </ul>
+    
 
+  
+  </div>
+
+    );
+  }
 
 
 

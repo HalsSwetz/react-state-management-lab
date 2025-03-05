@@ -90,7 +90,19 @@ const [zombieFighters, setZombieFighters]  = useState([
       },
     ]);
 
-
+    const handleAddFighter = (fighter) => {
+      if (money >= fighter.price) {
+        
+        setTeam([...team, fighter]);
+        
+        setZombieFighters(zombieFighters.filter(f => f.id !== fighter.id))
+        
+        setMoney(money-fighter.price)
+        
+      } else {
+        console.log('Not enough money to recruit this fighter');
+      }
+    }
 
 
   return (
